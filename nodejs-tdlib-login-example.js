@@ -10,6 +10,8 @@ const {Client}  = require('tdl')
 const {TDLib}  = require('tdl-tdlib-ffi')
 const {API_ID, API_HASH, BOT_TOKEN} = require('./config.js');
 
+
+
 const myDebug = false; // if you want to see logs change this to true
 const showSommeryLogs = true;
 function myLog(msg,msg2){
@@ -44,7 +46,7 @@ const API_BOT_AUTH = {
 const tdlib = new TDLib()
 
 // BotClient:
-const BotClient = new Client(tdlib, {
+const BotClient = new Client(new TDLib('../td/build/libtdjson'), {
   apiId: API_ID,
   apiHash: API_HASH,
   databaseDirectory: 'api_bot/_td_database',
