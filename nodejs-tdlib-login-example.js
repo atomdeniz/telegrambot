@@ -6,9 +6,9 @@
 *
 */
 
-const Client  = require('tdl')
-const TDLib  = require('tdl-tdlib-ffi')
-const API_ID, API_HASH, BOT_TOKEN = require('./config.js');
+const {Client}  = require('tdl')
+const {TDLib}  = require('tdl-tdlib-ffi')
+const {API_ID, API_HASH, BOT_TOKEN} = require('./config.js');
 
 const myDebug = false; // if you want to see logs change this to true
 const showSommeryLogs = true;
