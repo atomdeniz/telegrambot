@@ -43,10 +43,10 @@ const API_BOT_AUTH = {
   getToken: () => BOT_TOKEN   // if this line dont set pakase get error and dont work
 }
 
-const tdlib = new TDLib()
+const tdlib = new TDLib('../td/build/libtdjson')
 
 // BotClient:
-const BotClient = new Client(new TDLib('../td/build/libtdjson'), {
+const BotClient = new Client(tdlib, {
   apiId: API_ID,
   apiHash: API_HASH,
   databaseDirectory: 'api_bot/_td_database',
